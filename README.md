@@ -9,4 +9,5 @@ Cusomizatin can be done on:
 - display of second (INtervals are set correspondingly)
 - the font, color, size and position of the digits withing clock-element
 - width of the rings, color of each ring
+
 The plugin uses dynamically generated, minimalistic SVG and thus concerves resources
