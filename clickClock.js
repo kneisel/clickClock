@@ -1,11 +1,5 @@
 /*!
- * jquery.svgClock.js 
- *
- * Copyright (c) 2016 Peter Kneisel
- * http://www.mni.thm.de
- *
- * Licensed under MIT
- * http://www.opensource.org/licenses/mit-license.php
+ * clickClock.js 
  *
  * Launch  : March 2016
  * Version : 1.0
