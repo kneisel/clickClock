@@ -8,63 +8,63 @@
 <script type="text/javascript" src="jquery/jquery.min.js"></script>
 -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="clickClock.js"></script>
+<script type="text/javascript" src="jquery.clickClock.js"></script>
 <script type="text/javascript">
-   $(document).ready(function(){
+	$(document).ready(function(){
 
-      // A small clock, with display but without rings, showing seconds
-      $('#svgClock1').svgClock({     // DEFAULTS     MEANING
-         background  : "#000000",    // "#FFFFFF"    background-color
-         width       : 50,           // 180          width of clock    (in px)
-         height      : 50,           // 180          height of clock   (in px)
-         padding     : 4,            // 10           padding of clock  (in px)
-         top         : 10,           // 50           distance from top (in px)
-         showSecond  : 1,            // 1            0: don't show, 1: show
-         showRing    : 0,            // 1            0: don't show, 1: show 
-         showDisplay : 1,            // 1            0: don't show, 1: show 
-         fontColor   : "#999999",    // "#AAAAAA"    color of font
-         fontSize    : 40,           // 80           size of font      (in px)
-      });    
-      
-      // A big clock with display and ring, without second  
-      $('#svgClock2').svgClock({     // DEFAULTS     MEANING
-         background  : "#000000",    // "#FFFFFF"    background-color
-         width       : 400,          // 180          width of clock    (in px)
-         height      : 400,          // 180          height of clock   (in px)
-         padding     : 2,            // 10           padding of clock  (in px)
-         top         : 60,           // 50           distance from top (in px)
-         showSecond  : 0,            // 1            0: don't show, 1: show
-         showRing    : 1,            // 1            0: don't show, 1: show 
-         showDisplay : 1,            // 1            0: don't show, 1: show 
-         ringSize    : 20,           // 30           ring-size in percentage 0..100
-         colorHour   : "#552222",    // "#992222"    ring-color of hour
-         colorMinute : "#225522",    // "#225522"    ring-color of minute
-         colorSecond : "#333377",    // "#333377"    ring-color of second
-         fontColor   : "#999999",    // "#AAAAAA"    color of font
-         fontSize    : 240,          // 80           size of font      (in px)
-         fontFamily  : "sans-serif", // "sans-serif" font-family
-         fontWeight  : 900,          // "bold"       font-weight
-      });    
-         
-      // svgClock1 and svgClock2 toggle when clicked
-      $('#svgClock1').click( function() { // show svgClock2, hide svgClock1
-         $('#svgClock2').css({visibility:"visible"});
-         $('#svgClock1').css({visibility:"hidden"});
-      });        
-      $('#svgClock2').click( function() { // show svgClock1, hide svgClock2
-         $('#svgClock1').css({visibility:"visible"});
-         $('#svgClock2').css({visibility:"hidden"});
-      });
+		// A small clock, with display but without rings, showing seconds
+		$('#svgClock1').svgClock({     // DEFAULTS     MEANING
+			background  : "#000000",    // "#FFFFFF"    background-color
+			width       : 50,           // 180          width of clock    (in px)
+			height      : 50,           // 180          height of clock   (in px)
+			padding     : 6,            // 10           padding of clock  (in px)
+			top         : 10,           // 50           distance from top (in px)
+			showSecond  : 1,            // 1            0: don't show, 1: show
+			showRing    : 0,            // 1            0: don't show, 1: show 
+			showDisplay : 1,            // 1            0: don't show, 1: show 
+			fontColor   : "#999999",    // "#AAAAAA"    color of font
+			fontSize    : 40,           // 80           size of font      (in px)
+		});
 
-   });
-   
-   
+		// A big clock with display and ring, without second  
+		$('#svgClock2').svgClock({     // DEFAULTS     MEANING
+			background  : "#000000",    // "#FFFFFF"    background-color
+			width       : 400,          // 180          width of clock    (in px)
+			height      : 400,          // 180          height of clock   (in px)
+			padding     : 2,            // 10           padding of clock  (in px)
+			top         : 60,           // 50           distance from top (in px)
+			showSecond  : 0,            // 1            0: don't show, 1: show
+			showRing    : 1,            // 1            0: don't show, 1: show 
+			showDisplay : 1,            // 1            0: don't show, 1: show 
+			ringSize    : 20,           // 30           ring-size in percentage 0..100
+			colorHour   : "#552222",    // "#992222"    ring-color of hour
+			colorMinute : "#225522",    // "#225522"    ring-color of minute
+			colorSecond : "#333377",    // "#333377"    ring-color of second
+			fontColor   : "#999999",    // "#AAAAAA"    color of font
+			fontSize    : 240,          // 80           size of font      (in px)
+			fontFamily  : "sans-serif", // "sans-serif" font-family
+			fontWeight  : 900,          // "bold"       font-weight
+		});    
+
+		// svgClock1 and svgClock2 toggle when clicked
+		$('#svgClock1').click( function() { // show svgClock2, hide svgClock1
+			$('#svgClock2').css({visibility:"visible"});
+			$('#svgClock1').css({visibility:"hidden"});
+		});
+		$('#svgClock2').click( function() { // show svgClock1, hide svgClock2
+			$('#svgClock1').css({visibility:"visible"});
+			$('#svgClock2').css({visibility:"hidden"});
+		});
+
+	});
+
+
 </script>
 
 </head>
 
 <body style="background: #000000">
-   <div id="svgClock1" style="position:absolute; top:10px; left:10px;"></div>
-   <div id="svgClock2" style="position:absolute; top:100px; left:100px; visibility:hidden"></div>
+	<div id="svgClock1" style="position:absolute; top:10px; left:10px;"></div>
+	<div id="svgClock2" style="position:absolute; top:100px; left:100px; visibility:hidden"></div>
 </body>
 </html>

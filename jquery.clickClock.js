@@ -8,7 +8,7 @@
 
 
 (function($){
-   
+
 	// Extending the jQuery core with a jquery-plugin:
 	$.fn.svgClock = function(opts){
 
@@ -25,33 +25,33 @@
 		// define default values and merge with given one
 		if(!opts) opts = {}; 
 		var options = $.extend({
-         background  : "#FFFFFF",    // background-color
-         width       : 180,          // width of clock    (in px)
-         height      : 180,          // height of clock   (in px)
-         padding     : 10,           // padding of clock  (in px)
-         top         : 50,           // distance from top (in px)
-         showSecond  : 1,            // 0: don't show, 1: show
-         showRing    : 1,            // 0: don't show, 1: show 
-         showDisplay : 1,            // 0: don't show, 1: show 
-         ringSize    : 30,           // ring-size in percentage 0..100
-         colorHour   : "#992222",    // ring-color of hour
-         colorMinute : "#225522",    // ring-color of minute
-         colorSecond : "#333377",    // ring-color of second
-         fontColor   : "#AAAAAA",    // color of font
-         fontSize    : 80,           // size of font      (in px)
-              fontFamily  : "sans-serif", // font-family
-          fontWeight  : "bold",       // font-weight
-      }, opts );
+			background  : "#FFFFFF",    // background-color
+			width       : 180,          // width of clock    (in px)
+			height      : 180,          // height of clock   (in px)
+			padding     : 10,           // padding of clock  (in px)
+			top         : 50,           // distance from top (in px)
+			showSecond  : 1,            // 0: don't show, 1: show
+			showRing    : 1,            // 0: don't show, 1: show 
+			showDisplay : 1,            // 0: don't show, 1: show 
+			ringSize    : 30,           // ring-size in percentage 0..100
+			colorHour   : "#992222",    // ring-color of hour
+			colorMinute : "#225522",    // ring-color of minute
+			colorSecond : "#333377",    // ring-color of second
+			fontColor   : "#AAAAAA",    // color of font
+			fontSize    : 80,           // size of font      (in px)
+			fontFamily  : "sans-serif", // font-family
+			fontWeight  : "bold",       // font-weight
+		}, opts );
 
 		// Calling  svgClock, passing the container-element and options,
-		svgClock.call(container,options);  // first parameter is "this"
+		init.call(container,options);  // first parameter is "this"
 
 		// to make plugin "chainable"
 		return this;
 	}
 
 
-	function svgClock(options)
+	function init(options)
 	{      
 		var parts = ['hour','minute','second'];  // The parts of a clock: hour, minute, second      
 		var partsObj = {};                       // An array used by the functions of the plug-in:
@@ -74,7 +74,7 @@
 			$(this).append(clock);       
 			// will be available as "partsObj.part" in Interval-function
 			partsObj[parts[i]] = clock;
-	  	}
+		}
 
 		// fill styles of clock to make it flow
 		var clocks = $(this).find(".clock");
@@ -101,7 +101,7 @@
 				zIndex     : 20,
 			});
 		}
-	  
+
 		// fill sytles of ring: scale svg, fill colors
 		if (options.showRing) {
 			var svgs = $(this).find("svg");
@@ -130,7 +130,7 @@
 
 	}
 
-	  
+
 	function animation(part,current,total,options)
 	{
 		// Show display
