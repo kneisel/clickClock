@@ -44,14 +44,14 @@
       }, opts );
 
 		// Calling  svgClock, passing the container-element and options,
-		svgClock.call(container,options);  // first parameter is "this"
+		init.call(container,options);  // first parameter is "this"
 
 		// to make plugin "chainable"
 		return this;
 	}
 
 
-	function svgClock(options)
+	function init(options)
 	{      
 		var parts = ['hour','minute','second'];  // The parts of a clock: hour, minute, second      
 		var partsObj = {};                       // An array used by the functions of the plug-in:
